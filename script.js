@@ -10,6 +10,14 @@ buttons.forEach((item) => {
         display.innerText = string.substr(0,string.length - 1);
     }else if(display.innerText != '' && item.id=='equal'){
            display.innerText = eval(display.innerText);
+         function eval(){
+            try{
+                display.innerText=eval(display.innerText);
+            }
+            catch(err){
+                alert("invalid");
+            }
+           }
     }else if(display.innerText == '' && item.id=='equal'){
         display.innerText = 'Empty!';
         setTimeout(() => (display.innerText = ''), 2000);
